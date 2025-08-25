@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg" id="navbar">
+  <nav class="navbar fixed-top navbar-expand-lg" id="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">MUSEUM</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -31,7 +31,7 @@
   </nav>
 
   <section class="container-fluid px-0">
-    <div class="row align-items-center">
+    <div class="row align-items-center" id="home">
       <div class="col-md-6">
         <div class="text-white text-center d-none d-md-block" id="title-head">
           <h1>MUSEUM OF DINO</h1>
@@ -47,11 +47,23 @@
       </div>
     </div>
 
-    <div class="row align-items-center">
+    <div class="row align-items-center content" id="about">
       <div class="col-md-6 y-5 order-2 order-md-1">
         <img class="img-fluid" src="images/dino1.jpg" alt="">
       </div>
       <div class="col-md-6 text-center p-3 order-1 order-md-2">
+        <div class="justify-contents-center blurb m-5">
+            <h2>Museum of Ark</h2>
+            <img class="d-none d-lg-inline" src="images/dino-head.png" height="60" alt="">      
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae suscipit facere praesentium consectetur, nam fugiat maiores voluptatibus rerum fuga vitae vero sunt, in natus illo quibusdam ipsam dolor harum. Odit?</p>    
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center content-last" id="ticket">
+      <div class="col-md-6 order-2 order-md-1">
+        <img class="img-fluid" src="images/dino2.jpg" alt="">
+      </div>
+      <div class="col-md-6 text-center p-3 ">
         <div class="justify-contents-center blurb m-5">
             <h2>Museum of Ark</h2>
             <img class="d-none d-lg-inline" src="images/dino-head.png" height="60" alt="">      
@@ -66,6 +78,14 @@
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script>
+    $(function(){
+      $(document).scroll(function(){
+        let $nav = $('#navbar');
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+      })
+    })
+  </script>
 </body>
 
 </html>

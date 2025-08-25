@@ -16,18 +16,32 @@ body {
   color: #354259;
 }
 
+.navbar.scrolled{
+  background-color: #c2ded1;
+  transition: background 500ms;
+}
+
 #title-head {
   font-weight: 100;
   font-size: 4rem;
 }
 
-.blurb h2{
+.content {
+  margin-top: 100px;
+}
+
+.content-last{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.blurb h2 {
   color: #354259;
   font-weight: 100;
   font-size: 2.5rem;
 }
 
-.blurb p{
+.blurb p {
   color: #3f4e4f;
   font-weight: 100;
   font-size: 1.125rem;
@@ -35,7 +49,7 @@ body {
 }
 
 @media (max-width: 1200px) {
-  #title-head h1{
+  #title-head h1 {
     font-size: 2rem;
   }
 }
